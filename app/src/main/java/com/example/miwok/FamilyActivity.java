@@ -30,10 +30,10 @@ public class FamilyActivity extends AppCompatActivity {
 
         get_words();
 
-        CustomAdapterFamily customAdapterFamily = new CustomAdapterFamily(this, words);
+        CustomAdapter customAdapter = new CustomAdapter(this, words);
 
         ListView lv = findViewById(R.id.list_view);
-        lv.setAdapter(customAdapterFamily);
+        lv.setAdapter(customAdapter);
     }
 
     @Override

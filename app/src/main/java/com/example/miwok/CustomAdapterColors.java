@@ -14,9 +14,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import java.util.ArrayList;
 
-public class CustomAdapterColors extends ArrayAdapter<WordColors> {
+public class CustomAdapterColors extends ArrayAdapter<Word> {
     MediaPlayer mp3;
-    public CustomAdapterColors(Context context, ArrayList<WordColors> al){
+    public CustomAdapterColors(Context context, ArrayList<Word> al){
         super (context, 0, al);
     }
 
@@ -29,7 +29,7 @@ public class CustomAdapterColors extends ArrayAdapter<WordColors> {
             listItemView = LayoutInflater.from(getContext()).inflate(R.layout.number_list_item_layout, parent, false);
         }
 
-        final WordColors current_position = getItem(position);
+        final Word current_position = getItem(position);
 
         TextView english_word = listItemView.findViewById(R.id.textview1);
         english_word.setText(current_position.get_english_translation());

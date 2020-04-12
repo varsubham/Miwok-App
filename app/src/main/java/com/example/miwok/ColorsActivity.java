@@ -32,9 +32,9 @@ public class ColorsActivity extends AppCompatActivity  {
 
         add_words();
 
-        CustomAdapterColors customAdapterColors = new CustomAdapterColors(this, words);
+        CustomAdapter customAdapter = new CustomAdapter(this, words);
         ListView lv = findViewById(R.id.list_view);
-        lv.setAdapter(customAdapterColors);
+        lv.setAdapter(customAdapter);
 
     }
 

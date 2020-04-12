@@ -34,5 +34,7 @@ public class Word {
         this.english_translation = english;
         this.miwok_translation = miwok;
         this.mp3 = mp3;
+        this.img = 0;
+
     }
 }

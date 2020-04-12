@@ -14,10 +14,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import java.util.ArrayList;
 
-public class CustomAdapterFamily extends ArrayAdapter<WordFamily> {
+public class CustomAdapterFamily extends ArrayAdapter<Word> {
 
     MediaPlayer mp3;
-    public CustomAdapterFamily(Context context, ArrayList<WordFamily> al){
+    public CustomAdapterFamily(Context context, ArrayList<Word> al){
         super(context, 0, al);
     }
 
@@ -29,7 +29,7 @@ public class CustomAdapterFamily extends ArrayAdapter<WordFamily> {
         if(listItemView == null){
             listItemView = LayoutInflater.from(getContext()).inflate(R.layout.number_list_item_layout,parent, false);
         }
-        final WordFamily current_word = getItem(position);
+        final Word current_word = getItem(position);
 
         TextView english_word = listItemView.findViewById(R.id.textview1);
         english_word.setText(current_word.get_english_translation());

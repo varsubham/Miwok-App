@@ -23,6 +23,7 @@ public class CustomAdapter extends ArrayAdapter<Word> {
         super(context, 0, al);
     }
 
+
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
@@ -66,7 +67,9 @@ public class CustomAdapter extends ArrayAdapter<Word> {
         });
         return listItemView;
     }
-    private void releaseMediaPlayer() {
+
+
+    public void releaseMediaPlayer() {
         // If the media player is not null, then it may be currently playing a sound.
         if (mp3 != null) {
             // Regardless of the current state of the media player, release its resources

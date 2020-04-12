@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class NumbersActivity extends AppCompatActivity{
     // Array List of type WordNumber(custom class), containing english, miwok and image id
     ArrayList<Word> words = new ArrayList<>();
-
+    CustomAdapter customAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,14 +35,18 @@ public class NumbersActivity extends AppCompatActivity{
         add_words(); //WordNumber are added in ArrayList
 
         //creating Object of Custom Adapter Number
-        CustomAdapter customAdapter = new CustomAdapter(this, words);
+        customAdapter = new CustomAdapter(this, words);
 
         //Displaying the custom made array adapter in the ListView
         final ListView listview = findViewById(R.id.list_view);
 
         listview.setAdapter(customAdapter);
+    }
 
-
+    @Override
+    protected void onStop() {
+        super.onStop();
+        customAdapter.releaseMediaPlayer();
     }
 
     //When back button is pressed

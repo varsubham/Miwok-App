@@ -11,7 +11,7 @@ public class FamilyActivity extends AppCompatActivity {
 
 
     ArrayList<Word> words = new ArrayList<>();
-
+    CustomAdapter customAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -30,10 +30,16 @@ public class FamilyActivity extends AppCompatActivity {
 
         get_words();
 
-        CustomAdapter customAdapter = new CustomAdapter(this, words);
+        customAdapter = new CustomAdapter(this, words);
 
         ListView lv = findViewById(R.id.list_view);
         lv.setAdapter(customAdapter);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        customAdapter.releaseMediaPlayer();
     }
 
     @Override

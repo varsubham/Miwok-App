@@ -14,9 +14,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import java.util.ArrayList;
 
-public class CustomAdapterPhrases extends ArrayAdapter<WordPhrases> {
+public class CustomAdapterPhrases extends ArrayAdapter<Word> {
     MediaPlayer mp3;
-    public CustomAdapterPhrases(Context context, ArrayList<WordPhrases> al){
+    public CustomAdapterPhrases(Context context, ArrayList<Word> al){
         super (context, 0, al);
     }
 
@@ -29,7 +29,7 @@ public class CustomAdapterPhrases extends ArrayAdapter<WordPhrases> {
             listItemView = LayoutInflater.from(getContext()).inflate(R.layout.number_list_item_layout, parent, false);
         }
 
-        final WordPhrases current_word = getItem(position);
+        final Word current_word = getItem(position);
 
         TextView english_word = listItemView.findViewById(R.id.textview1);
         english_word.setText(current_word.get_english_translation());

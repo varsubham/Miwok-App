@@ -32,9 +32,9 @@ public class PhrasesActivity extends AppCompatActivity {
 
         add_words();
 
-        CustomAdapterPhrases customAdapterPhrases = new CustomAdapterPhrases(this, words);
+        CustomAdapter customAdapter = new CustomAdapter(this, words);
         ListView listView = findViewById(R.id.list_view);
-        listView.setAdapter(customAdapterPhrases);
+        listView.setAdapter(customAdapter);
 
     }
 

@@ -35,12 +35,12 @@ public class NumbersActivity extends AppCompatActivity{
         add_words(); //WordNumber are added in ArrayList
 
         //creating Object of Custom Adapter Number
-        CustomAdapterNumbers customAdapterNumbers = new CustomAdapterNumbers(this, words);
+        CustomAdapter customAdapter = new CustomAdapter(this, words);
 
         //Displaying the custom made array adapter in the ListView
         final ListView listview = findViewById(R.id.list_view);
 
-        listview.setAdapter(customAdapterNumbers);
+        listview.setAdapter(customAdapter);
 
 
     }

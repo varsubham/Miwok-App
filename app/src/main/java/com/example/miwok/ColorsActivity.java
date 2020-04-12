@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class ColorsActivity extends AppCompatActivity  {
 
     ArrayList<Word> words = new ArrayList<>();
-
+    CustomAdapter customAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,10 +32,16 @@ public class ColorsActivity extends AppCompatActivity  {
 
         add_words();
 
-        CustomAdapter customAdapter = new CustomAdapter(this, words);
+        customAdapter = new CustomAdapter(this, words);
         ListView lv = findViewById(R.id.list_view);
         lv.setAdapter(customAdapter);
 
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        customAdapter.releaseMediaPlayer();
     }
 
     @Override

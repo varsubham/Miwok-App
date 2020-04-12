@@ -15,10 +15,10 @@ import androidx.annotation.Nullable;
 import java.util.ArrayList;
 
 
-public class CustomAdapterNumbers extends ArrayAdapter<WordNumber> {
+public class CustomAdapterNumbers extends ArrayAdapter<Word> {
     MediaPlayer mp3;
     //Made a constructor
-    public CustomAdapterNumbers(Context context, ArrayList<WordNumber> al){
+    public CustomAdapterNumbers(Context context, ArrayList<Word> al){
         super(context, 0, al);
     }
 
@@ -32,7 +32,7 @@ public class CustomAdapterNumbers extends ArrayAdapter<WordNumber> {
         if(listItemView == null){
             listItemView = LayoutInflater.from(getContext()).inflate(R.layout.number_list_item_layout, parent, false);
         }
-        final WordNumber current_word = getItem(position);
+        final Word current_word = getItem(position);
 
 
         TextView english_word = listItemView.findViewById(R.id.textview1);
@@ -42,7 +42,7 @@ public class CustomAdapterNumbers extends ArrayAdapter<WordNumber> {
         mivok_word.setText(current_word.get_miwok_translation());
 
         ImageView img = (ImageView)listItemView.findViewById(R.id.imageview1);
-        img.setImageResource(current_word.get_image_view_id());
+        img.setImageResource(current_word.getImg());
 
         final ImageView img2 = (ImageView)listItemView.findViewById(R.id.imageview_blue_2);
         img2.setImageResource(R.drawable.number_list_rect);

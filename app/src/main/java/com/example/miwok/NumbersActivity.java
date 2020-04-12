@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 public class NumbersActivity extends AppCompatActivity{
     // Array List of type WordNumber(custom class), containing english, miwok and image id
-    ArrayList<WordNumber> words = new ArrayList<>();
+    ArrayList<Word> words = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,16 +74,16 @@ public class NumbersActivity extends AppCompatActivity{
 
     void add_words()
     {
-        words.add(new WordNumber("one", "lutti",R.drawable.number_one, R.raw.number_one));
-        words.add(new WordNumber("two", "otiiko", R.drawable.number_two, R.raw.number_two));
-        words.add(new WordNumber("three", "tolookosu", R.drawable.number_three, R.raw.number_three));
-        words.add(new WordNumber("four", "oyyisa", R.drawable.number_four, R.raw.number_four));
-        words.add(new WordNumber("five", "massokka", R.drawable.number_five, R.raw.number_five));
-        words.add(new WordNumber("six", "temmokka", R.drawable.number_six, R.raw.number_six));
-        words.add(new WordNumber("seven", "kenekaku", R.drawable.number_seven, R.raw.number_seven));
-        words.add(new WordNumber("eight", "kawinta", R.drawable.number_eight, R.raw.number_eight));
-        words.add(new WordNumber("nine", "wo’e", R.drawable.number_nine, R.raw.number_nine));
-        words.add(new WordNumber("ten", "na’aacha", R.drawable.number_ten, R.raw.number_ten));
+        words.add(new Word("one", "lutti",R.drawable.number_one, R.raw.number_one));
+        words.add(new Word("two", "otiiko", R.drawable.number_two, R.raw.number_two));
+        words.add(new Word("three", "tolookosu", R.drawable.number_three, R.raw.number_three));
+        words.add(new Word("four", "oyyisa", R.drawable.number_four, R.raw.number_four));
+        words.add(new Word("five", "massokka", R.drawable.number_five, R.raw.number_five));
+        words.add(new Word("six", "temmokka", R.drawable.number_six, R.raw.number_six));
+        words.add(new Word("seven", "kenekaku", R.drawable.number_seven, R.raw.number_seven));
+        words.add(new Word("eight", "kawinta", R.drawable.number_eight, R.raw.number_eight));
+        words.add(new Word("nine", "wo’e", R.drawable.number_nine, R.raw.number_nine));
+        words.add(new Word("ten", "na’aacha", R.drawable.number_ten, R.raw.number_ten));
 
 
 

@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class PhrasesActivity extends AppCompatActivity {
 
     ArrayList<Word> words = new ArrayList<>();
-
+    CustomAdapter customAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -33,9 +33,16 @@ public class PhrasesActivity extends AppCompatActivity {
 
         add_words();
 
-        CustomAdapter customAdapter = new CustomAdapter(this, words);
+        customAdapter = new CustomAdapter(this, words);
         ListView listView = findViewById(R.id.list_view);
         listView.setAdapter(customAdapter);
+
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        customAdapter.releaseMediaPlayer();
 
     }
 
